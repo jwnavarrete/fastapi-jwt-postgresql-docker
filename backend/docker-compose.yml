@@ -1,0 +1,20 @@
+version: "3"
+services:
+  api:
+    # Specifies thse path to Docker file &&the tag name respectively.
+    build: ./
+    # Specifies the set of commands we want to run inside the container.
+    command: bash -c " uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 && alembic upgrade head"
+    # command:  uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+    # Specifies port mappings <host_port>:<container_port>
+    ports:
+      - 8000:8000
+    networks:
+      - dev-network
+    # expose:
+    #   - 8000
+
+networks:
+  dev-network:
+    name: dev-network
+    driver: bridge
