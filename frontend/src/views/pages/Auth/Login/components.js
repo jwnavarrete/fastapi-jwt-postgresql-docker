@@ -11,11 +11,16 @@ export const AuthContainer = styled.div`
   margin: -20px 0 50px;
 `;
 
+export const Title1 = styled.h1`
+  font-weight: bold;
+  margin: 0;
+`;
+
 export const Title2 = styled.h2`
   text-align: center;
 `;
 
-export const Parrafo = styled.p`
+export const Paragraph = styled.p`
   font-size: 14px;
   font-weight: 100;
   line-height: 20px;
@@ -27,7 +32,7 @@ export const Span = styled.span`
   font-size: 12px;
 `;
 
-export const A = styled.a`
+export const Link = styled.a`
   color: #333;
   font-size: 14px;
   text-decoration: none;
@@ -88,6 +93,17 @@ export const SignInContainer = styled(FormContainer)`
   left: 0;
   width: 50%;
   z-index: 2;
+`;
+
+export const OverlayContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
 `;
 
 export const Overlay = styled.div`
