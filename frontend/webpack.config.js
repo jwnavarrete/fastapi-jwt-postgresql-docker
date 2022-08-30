@@ -25,7 +25,6 @@ module.exports = {
       '@assets': path.resolve(__dirname, 'src/assets/'),
       '@utils': path.resolve(__dirname, 'src/utils/'),
       '@services': path.resolve(__dirname, 'src/services/')
-
     }
   },
   module: {
@@ -38,9 +37,7 @@ module.exports = {
           options: {
             presets: [
               '@babel/preset-env',
-              ['@babel/preset-react',
-                { runtime: 'automatic' }
-              ]
+              ['@babel/preset-react', { runtime: 'automatic' }]
             ]
           }
         }
