@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 import { yupResolver } from '@hookform/resolvers/yup'
+import AuthService from '@services/AuthService'
 import * as yup from 'yup'
 import qs from 'qs'
 import axios from 'axios'
@@ -19,6 +20,7 @@ import {
   OverlayPanelLeft,
   OverlayPanelRight,
   Paragraph,
+  Error,
   Button,
   Footer,
   Link
@@ -26,6 +28,12 @@ import {
 
 const Login = () => {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if(AuthService.isLoggedIn()){
+      navigate('/recargo')
+    }
+  }, []);
 
   const schema = yup
     .object()
@@ -59,11 +67,14 @@ const Login = () => {
       )
       .then(response => {
         if (response.status === 200) {
-          navigate('/recargo')
+          const { data } = response;
+
+          AuthService.setToken(data.access_token)
+          navigate('/')
         }
       })
       .catch(error => {
-        console.log(`Este es un error de la peticion: ${error}`)
+        window.alert('Credenciales incorreectas');
       })
   }
 
@@ -81,13 +92,13 @@ const Login = () => {
                 placeholder='Username'
                 {...register('username')}
               />
-              <ErrorMessage errors={errors} name='username' as='p' />
+              <ErrorMessage errors={errors} name='username' render={({ message }) => <Error>{message}</Error>} />
               <AutInput
                 type='password'
                 placeholder='Password'
                 {...register('password')}
               />
-              <ErrorMessage errors={errors} name='password' as='p' />
+              <ErrorMessage errors={errors} name='password' render={({ message }) => <Error>{message}</Error>} />
               <Link href='#'>Olvidaste tu contrase&ntilde;a?</Link>
               <Button type='submit'>Ingresar</Button>
             </FormLogin>

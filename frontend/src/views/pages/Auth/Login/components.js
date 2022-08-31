@@ -28,6 +28,14 @@ export const Paragraph = styled.p`
   margin: 20px 0 30px;
 `
 
+export const Error = styled.p`
+  font-size: 12px;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  color: #ff4b2b;
+`
+
 export const Span = styled.span`
   font-size: 12px;
 `
