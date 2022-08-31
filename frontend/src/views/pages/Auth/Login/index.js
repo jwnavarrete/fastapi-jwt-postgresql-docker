@@ -111,12 +111,12 @@ const Login = () => {
           </OverlayContainer>
         </Container>
 
-        <Footer>
+        {/* <Footer>
           <Paragraph>
             � Copyright 2018 - Generali Ecuador Compa&ntilde;ia de Seguros S.A.
             *V.1.0.1.4
           </Paragraph>
-        </Footer>
+        </Footer> */}
       </AuthContainer>
     </>
   )
