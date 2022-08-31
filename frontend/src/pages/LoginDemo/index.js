@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import { useForm } from 'react-hook-form'
+import { ErrorMessage } from '@hookform/error-message';
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
@@ -28,12 +29,12 @@ const LoginDemo = () => {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <input type='text' placeholder='Enter email' {...register('email')} />
-        {/* {errors['email'] && <p>errors['email'].message</p>} */}
         <input
           type='password'
           placeholder='Enter password'
           {...register('password')}
         />
+        <ErrorMessage errors={errors} name="email" />
         <button className='btn' type='submit'>
           Submit
         </button>

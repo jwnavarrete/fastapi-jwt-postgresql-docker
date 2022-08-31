@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom';
 // project imports
 import Header from './Header';
 import Sidebar from './Sidebar';
@@ -16,9 +15,7 @@ const MainLayout = () => {
                 <Menu />
             </Sidebar>
 
-            <Main>
-                <Outlet />
-            </Main>
+            <Main/>
         </>
     );
 };

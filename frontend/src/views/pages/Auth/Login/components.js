@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AuthContainer = styled.div`
   background: #f6f5f7;
@@ -6,19 +6,19 @@ export const AuthContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
-`;
+`
 
 export const Title1 = styled.h1`
   font-weight: bold;
   margin: 0;
-`;
+`
 
 export const Title2 = styled.h2`
   text-align: center;
-`;
+`
 
 export const Paragraph = styled.p`
   font-size: 14px;
@@ -26,18 +26,18 @@ export const Paragraph = styled.p`
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-`;
+`
 
 export const Span = styled.span`
   font-size: 12px;
-`;
+`
 
 export const Link = styled.a`
   color: #333;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
-`;
+`
 
 export const Button = styled.button`
   border-radius: 20px;
@@ -50,7 +50,12 @@ export const Button = styled.button`
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
-`;
+
+  &:hover {
+    border: 1px solid #c40000;
+    background-color: #c40000;
+  }
+`
 
 export const FormLogin = styled.form`
   background-color: #ffffff;
@@ -61,7 +66,7 @@ export const FormLogin = styled.form`
   padding: 0 50px;
   height: 100%;
   text-align: center;
-`;
+`
 
 export const AutInput = styled.input`
   background-color: #eee;
@@ -69,7 +74,14 @@ export const AutInput = styled.input`
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
-`;
+
+  &:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+  }
+`
 
 export const Container = styled.div`
   background-color: #fff;
@@ -80,20 +92,20 @@ export const Container = styled.div`
   width: 768px;
   max-width: 100%;
   min-height: 480px;
-`;
+`
 
 export const FormContainer = styled.div`
   position: absolute;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
-`;
+`
 
 export const SignInContainer = styled(FormContainer)`
   left: 0;
   width: 50%;
   z-index: 2;
-`;
+`
 
 export const OverlayContainer = styled.div`
   position: absolute;
@@ -104,7 +116,7 @@ export const OverlayContainer = styled.div`
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
   z-index: 100;
-`;
+`
 
 export const Overlay = styled.div`
   background: #ff418d;
@@ -120,7 +132,7 @@ export const Overlay = styled.div`
   width: 200%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
-`;
+`
 
 export const OverlayPanel = styled.div`
   position: absolute;
@@ -135,20 +147,20 @@ export const OverlayPanel = styled.div`
   width: 50%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
-`;
+`
 
 export const OverlayPanelLeft = styled(OverlayPanel)`
   transform: translateX(-20%);
-`;
+`
 
 export const OverlayPanelRight = styled(OverlayPanel)`
   right: 0;
   transform: translateX(0);
-`;
+`
 
 export const SocialContainet = styled.div`
   margin: 20px 0;
-`;
+`
 
 export const Footer = styled.footer`
   background-color: #222;
@@ -160,4 +172,4 @@ export const Footer = styled.footer`
   right: 0;
   text-align: center;
   z-index: 999;
-`;
+`
