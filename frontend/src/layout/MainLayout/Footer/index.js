@@ -1,9 +1,9 @@
 import React from 'react'
-import {Header} from './components';
+import {Footer} from './components';
 
 const index = () => {
   return (
-    <Header>Header</Header>
+    <Footer>Footer</Footer>
   )
 }
 

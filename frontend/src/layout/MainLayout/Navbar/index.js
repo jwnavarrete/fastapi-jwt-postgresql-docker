@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
 import AuthService from '@services/AuthService'
+import {Navbar} from './components';
 
 const index = () => {
   const handleLogout = () => {
@@ -8,11 +9,11 @@ const index = () => {
   }
 
   return (
-    <nav>
+    <Navbar>
       <Link to='/'>Home</Link> |{' '} <Link to='/auth/login'>Login</Link>|{' '}
       <Link to='/recargo'>Recargo</Link>|{' '}
       <Link to='/auth/login' onClick={handleLogout}>Logout</Link>
-    </nav>
+    </Navbar>
   )
 }
 

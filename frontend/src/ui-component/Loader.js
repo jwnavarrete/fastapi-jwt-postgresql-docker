@@ -1,20 +1,29 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 // styles
-const LoaderWrapper = styled('div')({
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    zIndex: 1301,
-    width: '100%'
-});
+const Spinner = styled.div`
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #b22d;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
 
 // ==============================|| LOADER ||============================== //
-const Loader = () => (
-    <LoaderWrapper>
-        <h1>Cargando</h1>
-        {/* aqui va el spiner */}
-    </LoaderWrapper>
-);
+const Loader = () => <Spinner />;
 
 export default Loader;
