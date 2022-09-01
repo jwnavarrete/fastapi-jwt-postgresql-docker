@@ -1,35 +1,39 @@
 // project imports
-import react, { useEffect } from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Main from './Main';
-import Menu from './Menu';
-import AuthService from '@services/AuthService'
-import { useNavigate } from 'react-router-dom'
-
+import react, { useEffect } from "react";
+import styled from "styled-components";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Main from "./Main";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import AuthService from "@services/AuthService";
+import { useNavigate } from "react-router-dom";
+import { MainContainer } from "./components";
 // import navigation from 'menu-items';
 // ==============================|| MAIN LAYOUT ||============================== //
 
 const MainLayout = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        if(!AuthService.isLoggedIn()){
-            navigate('auth/login')
-        }
-    }, []);
+  useEffect(() => {
+    if (!AuthService.isLoggedIn()) {
+      navigate("auth/login");
+    }
+  }, []);
 
-    return (
-        <>
-            <Header />
+  return (
+    <MainContainer>
+      <Header />
 
-            <Sidebar>
-                <Menu />
-            </Sidebar>
+      <Sidebar>
+        <Navbar />
+      </Sidebar>
 
-            <Main/>
-        </>
-    );
+      <Main />
+
+      <Footer />
+    </MainContainer>
+  );
 };
 
 export default MainLayout;

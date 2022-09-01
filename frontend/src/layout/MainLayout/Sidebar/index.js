@@ -1,11 +1,12 @@
 import React from 'react'
+import {Sidebar} from './components';
 
 const index = (props) => {
     return (
-        <div>
+        <Sidebar>
             Sidebar
             {props.children}
-        </div>
+        </Sidebar>
     )
 }
 
