@@ -5,27 +5,6 @@
   --secundary: #f57f17;
   --secundary-dark: #bc5100;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  /* background-image: url("https://seguros.roams.es/images/post/es_ES_insurance/aseguradoras-generali.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
-}
 
 .container {
   max-width: 400px;
@@ -41,6 +20,11 @@ body {
 }
 
 h3 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+
   display: block;
   font-size: 30px;
   font-weight: 300;
@@ -48,6 +32,11 @@ h3 {
 }
 
 h4 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  
   margin: 5px 0 15px;
   display: block;
   font-size: 13px;
