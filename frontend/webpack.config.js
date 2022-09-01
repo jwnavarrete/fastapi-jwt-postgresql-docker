@@ -29,7 +29,8 @@ module.exports = {
       '@services': path.resolve(__dirname, 'src/services/'),
       '@views': path.resolve(__dirname, 'src/views/'),
       '@layout': path.resolve(__dirname, 'src/layout/'),
-      '@ui-component': path.resolve(__dirname, 'src/ui-component/')
+      '@ui-component': path.resolve(__dirname, 'src/ui-component/'),
+      '@themes': path.resolve(__dirname, 'src/themes/')
     }
   },
   module: {

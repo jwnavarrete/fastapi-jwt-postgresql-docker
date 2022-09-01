@@ -1,18 +1,20 @@
-import { useState } from 'react'
-import qs from 'qs'
-import axios from 'axios'
-import React from 'react'
-import Login from '@pages/Login'
-import LoginDemo from '@pages/LoginDemo'
-import Routes from '@routes';
-import NavigationScroll from '@layout/NavigationScroll';
+import React from "react";
+import Routes from "@routes";
+import NavigationScroll from "@layout/NavigationScroll";
+import { ThemeProvider } from "styled-components";
+import theme from "@themes";
 
 function App() {
+  console.log(theme);
   return (
-    <NavigationScroll>
-      <Routes />
-    </NavigationScroll>
-  )
+    <>
+      <ThemeProvider theme={theme}>
+        <NavigationScroll>
+          <Routes />
+        </NavigationScroll>
+      </ThemeProvider>
+    </>
+  );
 }
 
-export default App
+export default App;
