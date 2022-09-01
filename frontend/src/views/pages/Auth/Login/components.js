@@ -11,11 +11,6 @@ export const AuthContainer = styled.div`
   margin: -20px 0 50px;
 `
 
-export const Title1 = styled.h1`
-  font-weight: bold;
-  margin: 0;
-`
-
 export const Title2 = styled.h2`
   text-align: center;
 `
@@ -26,14 +21,6 @@ export const Paragraph = styled.p`
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-`
-
-export const Error = styled.p`
-  font-size: 12px;
-  margin: 0;
-  width: 100%;
-  text-align: left;
-  color: #ff4b2b;
 `
 
 export const Span = styled.span`
@@ -47,24 +34,6 @@ export const Link = styled.a`
   margin: 15px 0;
 `
 
-export const Button = styled.button`
-  border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
-
-  &:hover {
-    border: 1px solid #c40000;
-    background-color: #c40000;
-  }
-`
-
 export const FormLogin = styled.form`
   background-color: #ffffff;
   display: flex;
@@ -74,21 +43,6 @@ export const FormLogin = styled.form`
   padding: 0 50px;
   height: 100%;
   text-align: center;
-`
-
-export const AutInput = styled.input`
-  background-color: #eee;
-  border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 100%;
-
-  &:hover {
-    -webkit-transition: border-color 0.3s ease-in-out;
-    -moz-transition: border-color 0.3s ease-in-out;
-    transition: border-color 0.3s ease-in-out;
-    border: 1px solid #aaa;
-  }
 `
 
 export const Container = styled.div`
