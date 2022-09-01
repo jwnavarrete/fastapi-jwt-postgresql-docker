@@ -111,7 +111,7 @@ const Login = () => {
                 render={({ message }) => <Error>{message}</Error>}
               />
               <Link href='#'>Olvidaste tu contrase&ntilde;a?</Link>
-              <Button type='submit'>Ingresar</Button>
+              <Button type='submit' color='primary'>Ingresar</Button>
             </FormLogin>
           </SignInContainer>
           <OverlayContainer>
