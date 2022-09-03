@@ -1,9 +1,12 @@
 import React from 'react'
 import {Header} from './components';
 
-const index = () => {
+const index = ({ handleLeftDrawerToggle }) => {
   return (
-    <Header>Header</Header>
+    <Header>
+      Header
+      <button onClick={handleLeftDrawerToggle}>Menu</button>
+    </Header>
   )
 }
 
