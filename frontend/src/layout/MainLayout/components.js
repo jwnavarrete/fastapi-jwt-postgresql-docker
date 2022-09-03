@@ -11,7 +11,6 @@ export const MainContainer = styled.div`
   > * {
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    padding: 10px;
     text-align: center;
   }
 
