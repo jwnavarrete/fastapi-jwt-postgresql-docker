@@ -1,10 +1,8 @@
 // project imports
 import react, { useEffect } from "react";
-import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Main from "./Main";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 import AuthService from "@services/AuthService";
 import { useNavigate } from "react-router-dom";
@@ -25,9 +23,7 @@ const MainLayout = () => {
     <MainContainer>
       <Header />
 
-      <Sidebar>
-        <Navbar />
-      </Sidebar>
+      <Sidebar></Sidebar>
 
       <Main />
 

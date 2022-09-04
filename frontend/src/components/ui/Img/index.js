@@ -7,7 +7,7 @@ const Img = styled.img`
 `;
 
 const index = (props) => {
-  return <Img {...props} />;
+  return <Img {...props}/>;
 };
 
 export default index;

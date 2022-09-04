@@ -1,10 +1,10 @@
-import React from 'react'
-import {Header} from './components';
+import React from "react";
+import { Header } from "./components";
 
-const index = () => {
-  return (
-    <Header>Header</Header>
-  )
-}
+const index = ({ children }) => {
+  return <Header>
+    {children}
+    </Header>;
+};
 
-export default index
+export default index;

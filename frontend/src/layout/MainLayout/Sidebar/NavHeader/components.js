@@ -35,14 +35,13 @@ export const Navbar_Brand = styled.a`
   -ms-flex-align: center;
   align-items: center;
   font-size: inherit;
-  /* font-size: 2rem; */
   line-height: inherit;
   white-space: nowrap;
 `;
 
 export const Brand_Logo = styled.span`
   img {
-    max-width: 36px;
+    max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : "35px")};
   }
 `;
 
@@ -58,12 +57,12 @@ export const Brand_Text = styled.h2`
   font-size: 1.45rem;
 `;
 
-export const Modern_Nav_Toggle = styled.a`
+export const Modern_Nav = styled.a`
   -webkit-animation: fadein 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s 1 normal
     forwards;
   animation: fadein 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s 1 normal forwards;
   padding: 0;
-  margin: 1.571rem 0;
+  margin: 1.981rem 0;
   display: block;
   color: ${(props) => props.theme.palette.error.dark};
 `;

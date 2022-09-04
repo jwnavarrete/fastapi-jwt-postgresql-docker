@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Img from "@components/ui/Img";
-import Logo from "@assets/images/icons/logo.svg";
+import Logo from "@assets/images/icons/gruppo-generali.svg";
 import { FiDisc } from "react-icons/fi";
 
 import {
@@ -10,10 +10,16 @@ import {
   Navbar_Brand,
   Brand_Logo,
   Brand_Text,
-  Modern_Nav_Toggle,
+  Modern_Nav,
 } from "./components";
 
 const index = () => {
+  const [toogleSidebare, setToggleSidebar] = useState(false);
+
+  const handelToggle = () => {
+    setToggle(!toogleSidebare);
+  };
+
   return (
     <Navbar_Header>
       <Navbar_Nav>
@@ -22,13 +28,13 @@ const index = () => {
             <Brand_Logo>
               <Img src={Logo} alt="logo" />
             </Brand_Logo>
-            <Brand_Text>Generali</Brand_Text>
+            <Brand_Text>Generali{toogleSidebare}</Brand_Text>
           </Navbar_Brand>
         </Nav_Item>
         <Nav_Item>
-          <Modern_Nav_Toggle>
+          <Modern_Nav onClick={handelToggle}>
             <FiDisc />
-          </Modern_Nav_Toggle>
+          </Modern_Nav>
         </Nav_Item>
       </Navbar_Nav>
     </Navbar_Header>
