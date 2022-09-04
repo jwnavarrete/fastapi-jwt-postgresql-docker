@@ -34,6 +34,7 @@ export const Li = styled.li`
 export const Anchor = styled.a`
   width: 50px;
   text-decoration: none;
+  color: rgb(198, 40, 40);
 `
 
 export const Row = styled.div`
