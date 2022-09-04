@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Sep  3 11:39:13 2022
+# Make data base, printed on Sat Sep  3 23:21:17 2022
 
 # Variables
 
@@ -18,6 +18,10 @@ make: *** No rule to make target `all'.  Stop.
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+LC_CTYPE = UTF-8
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -27,10 +31,10 @@ make: *** No rule to make target `all'.  Stop.
 # makefile
 CURDIR := /Users/bryanhenrry94/workspace/fastapi-jwt-postgresql-docker
 # makefile
- 
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+ 
 # environment
 _ = /usr/bin/make
 # makefile
@@ -40,13 +44,11 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-PATH = /home/jnavarrete/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/remote-cli:/home/jnavarrete/.local/bin:/home/jnavarrete/.nvm/versions/node/v16.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Users/jwnav/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jwnav/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+VSCODE_CWD = /Users/bryanhenrry94/workspace/fastapi-jwt-postgresql-docker
 # environment
 PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # environment
 ELECTRON_RUN_AS_NODE = 1
-# environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-ace66278-0141-410d-be58-0ba259f6eb19.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
@@ -60,13 +62,7 @@ HOMEBREW_CELLAR = /opt/homebrew/Cellar
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-OSH = /home/jnavarrete/.oh-my-bash
-# default
-.LOADED := 
-# environment
-WSL_INTEROP = /run/WSL/161_interop
-# environment
-WT_SESSION = bd3d4015-6e45-4ba9-8b13-6b7108e6976c
+MANPATH = /opt/homebrew/share/man::
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -74,9 +70,11 @@ HOME = /Users/bryanhenrry94
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
+VSCODE_CLI = 1
+# environment
 VSCODE_CODE_CACHE_PATH = /Users/bryanhenrry94/Library/Application Support/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+LOGNAME = bryanhenrry94
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -90,17 +88,21 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
+SHLVL = 3
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = bryanhenrry94
 # makefile
 .DEFAULT_GOAL := 
+# environment
+TERM_SESSION_ID = D4B81E6E-B949-49F8-87CE-041A402697BF
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# environment
+TERM_PROGRAM = Apple_Terminal
 # default
 .VARIABLES := 
 # environment
@@ -118,7 +120,9 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.11116033.11116039
+TERM_PROGRAM_VERSION = 445
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.11116033.11116039.A6EE0975-3A4C-4F84-A04B-38CBB05D8741
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -146,9 +150,11 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 27518
+TERM = xterm-256color
+# environment
+VSCODE_PID = 59589
 # variable set hash-table stats:
-# Load=62/1024=6%, Rehash=0, Collisions=1/82=1%
+# Load=69/1024=7%, Rehash=0, Collisions=1/89=1%
 
 # Pattern-specific Variable Values
 
@@ -230,9 +236,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# strcache performance: lookups = 19 / hit rate = 15%
-# hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Sat Sep  3 11:39:13 2022
+# Finished Make data base on Sat Sep  3 23:21:17 2022
 
  
