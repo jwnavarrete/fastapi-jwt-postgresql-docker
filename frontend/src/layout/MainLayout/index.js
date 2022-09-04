@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Header from './Header'
 import Sidebar from './Sidebar'
 import Main from './Main'
-import Navbar from './Navbar'
 import Footer from './Footer'
 import AuthService from '@services/AuthService'
 import { useNavigate } from 'react-router-dom'
@@ -36,9 +35,7 @@ const MainLayout = () => {
       <Sidebar
         drawerOpen={leftDrawerOpened}
         drawerToggle={handleLeftDrawerToggle}
-      >
-        <Navbar />
-      </Sidebar>
+      />
 
       <Main open={leftDrawerOpened}/>
 

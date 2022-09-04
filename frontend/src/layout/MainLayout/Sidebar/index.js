@@ -1,64 +1,82 @@
 import React from 'react'
-import { Sidebar } from './components'
+import { Sidebar, Navigation, NavigationHeader } from './components'
 import NavHeader from './NavHeader'
-import Drawer from '@components/ui/Drawer'
-import PropTypes from 'prop-types'
-import PerfectScrollbar from 'react-perfect-scrollbar'
-import { BrowserView, MobileView } from 'react-device-detect'
+import Span from '@components/ui/Span'
+import { useLocation } from 'react-router-dom'
 
-const index = ({ drawerOpen, drawerToggle, window, children }) => {
-  const matchUpMd = true
+import {
+  BiDotsHorizontalRounded,
+  BiHome,
+  BiBarChartAlt2,
+  BiKey,
+  BiGridSmall,
+  BiLogOutCircle
+} from 'react-icons/bi'
 
-  const drawer = (
-    <>
-      <BrowserView>
-        <PerfectScrollbar
-          component='div'
-          style={{
-            height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)',
-            paddingLeft: '5px',
-            paddingRight: '5px'
-          }}
-        >
-          <h1>DEMO 2</h1>
-        </PerfectScrollbar>
-      </BrowserView>
-      <MobileView>
-        <h1>DEMO </h1>
-      </MobileView>
-    </>
-  )
+import NavItem from './NavItem'
+import NavItemSub from './NavItemSub'
+import AuthService from '@services/AuthService'
 
-  const container =
-    window !== undefined ? () => window.document.body : undefined
+const index = ({ drawerOpen, drawerToggle, children }) => {
+  const pathname = useLocation().pathname
 
-  const MyDrawer = ({ drawerOpen }) => {
-    {
-      !drawerOpen ? (
-        <Drawer show={drawerOpen} />
-      ) : (
-        <Sidebar>
-          <NavHeader />
-          Este es Sidebar
-          {children}
-        </Sidebar>
-      )
-    }
+  const handleLogout = () => {
+    AuthService.logout()
+  }
+
+  const isActive = to => {
+    return to === pathname ? 'active' : ''
   }
 
   return (
     <Sidebar>
       <NavHeader />
-      Este es Sidebar
-      {children}
+
+      <Navigation>
+        {/* Navigation Header */}
+        <NavigationHeader>
+          <Span>APPS & PAGES</Span>
+          <BiDotsHorizontalRounded />
+        </NavigationHeader>
+
+        {/* Menu Nav Item */}
+        <NavItem
+          title='Home'
+          icon={<BiHome />}
+          to={'/'}
+          active={isActive('/')}
+        />
+
+        <NavItemSub title='Mantenimiento' icon={<BiKey />} to={''}>
+          <NavItem
+            title='Recargo'
+            icon={<BiGridSmall />}
+            to={'/recargo'}
+            active={isActive('/recargo')}
+          />
+        </NavItemSub>
+
+        <NavItem
+          title='Ejemplo'
+          icon={<BiHome />}
+          to={'/sample-page'}
+          active={isActive('/sample-page')}
+        />
+
+        <NavigationHeader>
+          <Span>OTHERS</Span>
+          <BiDotsHorizontalRounded />
+        </NavigationHeader>
+
+        <NavItem
+          title='Logout'
+          icon={<BiLogOutCircle />}
+          to={'/auth/login'}
+          onClick={handleLogout}
+        />
+      </Navigation>
     </Sidebar>
   )
-}
-
-Sidebar.propTypes = {
-  drawerOpen: PropTypes.bool,
-  drawerToggle: PropTypes.func,
-  window: PropTypes.object
 }
 
 export default index
