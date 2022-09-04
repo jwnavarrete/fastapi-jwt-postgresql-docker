@@ -11,6 +11,7 @@ import AuthService from '@services/AuthService'
 import { useNavigate } from 'react-router-dom'
 import { MainContainer } from './components'
 import { SET_MENU } from '@store/actions'
+
 // ==============================|| MAIN LAYOUT ||============================== //
 
 const MainLayout = () => {
