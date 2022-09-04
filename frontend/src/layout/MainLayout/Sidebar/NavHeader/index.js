@@ -17,7 +17,7 @@ const index = () => {
   const [toogleSidebare, setToggleSidebar] = useState(false);
 
   const handelToggle = () => {
-    setToggle(!toogleSidebare);
+    setToggleSidebar(!toogleSidebare);
   };
 
   return (

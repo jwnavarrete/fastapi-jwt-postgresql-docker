@@ -26,7 +26,7 @@ const index = (props) => {
   };
 
   const isActive = (to) => {
-    return to === pathname ? true : false;
+    return to === pathname ? "active" : "";
   };
 
   return (
