@@ -3,6 +3,7 @@ import { Sidebar, Navigation, NavigationHeader } from './components'
 import NavHeader from './NavHeader'
 import Span from '@components/ui/Span'
 import { useLocation } from 'react-router-dom'
+import Drawer from '@components/ui/Drawer'
 
 import {
   BiDotsHorizontalRounded,
@@ -29,53 +30,55 @@ const index = ({ drawerOpen, drawerToggle, children }) => {
   }
 
   return (
-    <Sidebar>
-      <NavHeader />
+    <>
+      <Drawer open={drawerOpen} onClose={drawerToggle}></Drawer>
+      <Sidebar>
+        <NavHeader />
+        <Navigation>
+          {/* Navigation Header */}
+          <NavigationHeader>
+            <Span>APPS & PAGES</Span>
+            <BiDotsHorizontalRounded />
+          </NavigationHeader>
 
-      <Navigation>
-        {/* Navigation Header */}
-        <NavigationHeader>
-          <Span>APPS & PAGES</Span>
-          <BiDotsHorizontalRounded />
-        </NavigationHeader>
-
-        {/* Menu Nav Item */}
-        <NavItem
-          title='Home'
-          icon={<BiHome />}
-          to={'/'}
-          active={isActive('/')}
-        />
-
-        <NavItemSub title='Mantenimiento' icon={<BiKey />} to={''}>
+          {/* Menu Nav Item */}
           <NavItem
-            title='Recargo'
-            icon={<BiGridSmall />}
-            to={'/recargo'}
-            active={isActive('/recargo')}
+            title='Home'
+            icon={<BiHome />}
+            to={'/'}
+            active={isActive('/')}
           />
-        </NavItemSub>
 
-        <NavItem
-          title='Ejemplo'
-          icon={<BiHome />}
-          to={'/sample-page'}
-          active={isActive('/sample-page')}
-        />
+          <NavItemSub title='Mantenimiento' icon={<BiKey />} to={''}>
+            <NavItem
+              title='Recargo'
+              icon={<BiGridSmall />}
+              to={'/recargo'}
+              active={isActive('/recargo')}
+            />
+          </NavItemSub>
 
-        <NavigationHeader>
-          <Span>OTHERS</Span>
-          <BiDotsHorizontalRounded />
-        </NavigationHeader>
+          <NavItem
+            title='Ejemplo'
+            icon={<BiHome />}
+            to={'/sample-page'}
+            active={isActive('/sample-page')}
+          />
 
-        <NavItem
-          title='Logout'
-          icon={<BiLogOutCircle />}
-          to={'/auth/login'}
-          onClick={handleLogout}
-        />
-      </Navigation>
-    </Sidebar>
+          <NavigationHeader>
+            <Span>OTHERS</Span>
+            <BiDotsHorizontalRounded />
+          </NavigationHeader>
+
+          <NavItem
+            title='Logout'
+            icon={<BiLogOutCircle />}
+            to={'/auth/login'}
+            onClick={handleLogout}
+          />
+        </Navigation>
+      </Sidebar>
+    </>
   )
 }
 

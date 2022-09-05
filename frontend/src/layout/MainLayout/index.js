@@ -36,8 +36,8 @@ const MainLayout = () => {
         drawerOpen={leftDrawerOpened}
         drawerToggle={handleLeftDrawerToggle}
       />
-
-      <Main open={leftDrawerOpened}/>
+      
+      <Main open={leftDrawerOpened} />
 
       <Footer />
     </MainContainer>

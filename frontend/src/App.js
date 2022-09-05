@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import qs from 'qs'
 import axios from 'axios'
-import Routes from '@routes';
-import NavigationScroll from '@layout/NavigationScroll';
-import { ThemeProvider } from "styled-components";
-import theme from "@themes";
-import '@assets/scss/main.scss';
+import Routes from '@routes'
+import NavigationScroll from '@layout/NavigationScroll'
+import { ThemeProvider } from 'styled-components'
+import theme from '@themes'
+import '@assets/scss/main.scss'
 
-function App() {
-  console.log(theme);
+function App () {
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -17,7 +16,7 @@ function App() {
         </NavigationScroll>
       </ThemeProvider>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

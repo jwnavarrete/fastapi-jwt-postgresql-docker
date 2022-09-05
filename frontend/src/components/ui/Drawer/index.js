@@ -1,11 +1,12 @@
 import React from 'react'
-import { SideDrawer } from './components.js'
+import 'react-modern-drawer/dist/index.css'
+import Drawer from 'react-modern-drawer'
 
-const index = ({ show }) => {
+const index = ({ open, onClose, children }) => {
   return (
-    <SideDrawer show={show}>
-      <h1>Hello, I'am Drawer!</h1>
-    </SideDrawer>
+    <Drawer open={open} onClose={onClose} direction='left' className='bla bla bla'>
+      {children}
+    </Drawer>
   )
 }
 
