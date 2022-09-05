@@ -20,13 +20,11 @@ export const Sidebar = styled.aside`
 `;
 
 export const Navigation = styled.ul`
-  min-height: 100vh;
   padding-bottom: 20px;
   font-size: 1.1rem;
   font-family: Montserrat, Helvetica, Arial, serif;
   font-weight: 400;
   overflow-y: hidden;
-  /* background: #dddd; */
 
   li {
     position: relative;
